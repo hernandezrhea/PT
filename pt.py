@@ -2,8 +2,6 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 
-# ================= COLOR THEME =================
-
 BG = "#F3F7FF"
 BLUE = "#3B82F6"
 DARK_BLUE = "#1E40AF"
