@@ -5,10 +5,10 @@ from tkinter import ttk, messagebox
 # ================= COLOR THEME =================
 
 BG = "#F3F7FF"
-PURPLE = "#3B82F6"
-DARK_PURPLE = "#1E40AF"
-LIGHT_PURPLE = "#DBEAFE"
-PALE_PURPLE = "#EFF6FF"
+BLUE = "#3B82F6"
+DARK_BLUE = "#1E40AF"
+LIGHT_BLUE = "#DBEAFE"
+PALE_BLUE = "#EFF6FF"
 WHITE = "#FFFFFF"
 TEXT = "#1E293B"
 BORDER = "#CBDCF5"
@@ -142,14 +142,14 @@ class DiskSchedulingGUI:
     def create_widgets(self):
 
         # Header
-        header = tk.Frame(self.root, bg=PURPLE, height=85)
+        header = tk.Frame(self.root, bg=BLUE, height=85)
         header.pack(fill="x", padx=25, pady=(22, 18))
         header.pack_propagate(False)
 
         tk.Label(
             header,
             text="DISK SCHEDULING",
-            bg=PURPLE,
+            bg=BLUE,
             fg=WHITE,
             font=("Segoe UI", 24, "bold")
         ).pack(expand=True)
@@ -182,7 +182,7 @@ class DiskSchedulingGUI:
             config_panel,
             text="DISK CONFIGURATION",
             bg=WHITE,
-            fg=DARK_PURPLE,
+            fg=DARK_BLUE,
             font=("Segoe UI", 13, "bold")
         ).pack(anchor="w", padx=20, pady=(18, 12))
 
@@ -239,7 +239,7 @@ class DiskSchedulingGUI:
             algo_panel,
             text="SELECT ALGORITHM",
             bg=WHITE,
-            fg=DARK_PURPLE,
+            fg=DARK_BLUE,
             font=("Segoe UI", 13, "bold")
         ).pack(anchor="w", padx=20, pady=(18, 12))
 
@@ -263,10 +263,10 @@ class DiskSchedulingGUI:
                 button_grid,
                 text=name,
                 command=lambda index=i: self.run_selected(index),
-                bg=PALE_PURPLE,
-                fg=DARK_PURPLE,
-                activebackground=LIGHT_PURPLE,
-                activeforeground=DARK_PURPLE,
+                bg=PALE_BLUE,
+                fg=DARK_BLUE,
+                activebackground=LIGHT_BLUE,
+                activeforeground=DARK_BLUE,
                 font=("Segoe UI", 11, "bold"),
                 relief="flat",
                 bd=0,
@@ -308,7 +308,7 @@ class DiskSchedulingGUI:
             results_panel,
             text="RESULTS",
             bg=WHITE,
-            fg=DARK_PURPLE,
+            fg=DARK_BLUE,
             font=("Segoe UI", 17, "bold"),
             anchor="w"
         ).grid(
@@ -335,14 +335,14 @@ class DiskSchedulingGUI:
         self.output = tk.Text(
             summary_frame,
             height=9,
-            bg=PALE_PURPLE,
+            bg=PALE_BLUE,
             fg=TEXT,
             font=("Consolas", 10),
             relief="flat",
             wrap="word",
             padx=15,
             pady=12,
-            insertbackground=DARK_PURPLE
+            insertbackground=DARK_BLUE
         )
 
         summary_scrollbar = tk.Scrollbar(
@@ -379,7 +379,7 @@ class DiskSchedulingGUI:
             results_panel,
             text="HEAD MOVEMENT TABLE",
             bg=WHITE,
-            fg=DARK_PURPLE,
+            fg=DARK_BLUE,
             font=("Segoe UI", 13, "bold"),
             anchor="w"
         ).grid(
@@ -467,18 +467,18 @@ class DiskSchedulingGUI:
 
         self.table.tag_configure(
             "odd",
-            background=PALE_PURPLE
+            background=PALE_BLUE
         )
 
         # Footer
-        footer = tk.Frame(self.root, bg=PURPLE, height=48)
+        footer = tk.Frame(self.root, bg=BLUE, height=48)
         footer.pack(fill="x", padx=25, pady=(0, 18))
         footer.pack_propagate(False)
 
         tk.Label(
             footer,
             text="PLATFORM TECHNOLOGY",
-            bg=PURPLE,
+            bg=BLUE,
             fg=WHITE,
             font=("Segoe UI", 11, "bold")
         ).pack(expand=True)
@@ -503,14 +503,14 @@ class DiskSchedulingGUI:
         entry = tk.Entry(
             row,
             textvariable=variable,
-            bg=PALE_PURPLE,
+            bg=PALE_BLUE,
             fg=TEXT,
-            insertbackground=DARK_PURPLE,
+            insertbackground=DARK_BLUE,
             relief="flat",
             font=("Segoe UI", 10),
             highlightthickness=1,
             highlightbackground=BORDER,
-            highlightcolor=PURPLE
+            highlightcolor=BLUE
         )
 
         entry.pack(
@@ -530,16 +530,16 @@ class DiskSchedulingGUI:
                 button.config(
                     bg=SELECTED,
                     fg=WHITE,
-                    activebackground=DARK_PURPLE,
+                    activebackground=DARK_BLUE,
                     activeforeground=WHITE
                 )
 
             else:
                 button.config(
-                    bg=PALE_PURPLE,
-                    fg=DARK_PURPLE,
-                    activebackground=LIGHT_PURPLE,
-                    activeforeground=DARK_PURPLE
+                    bg=PALE_BLUE,
+                    fg=DARK_BLUE,
+                    activebackground=LIGHT_BLUE,
+                    activeforeground=DARK_BLUE
                 )
 
     def move_up(self, event=None):
